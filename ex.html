@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .result {
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <div class="quiz2">
+        <form id="quizForm">
+            <div id="questionContainer">
+                <p>Question 1: What is the capital of France?</p>
+                <label>
+                    <input type="checkbox" name="option" value="A"> Berlin
+                </label><br>
+                <label>
+                    <input type="checkbox" name="option" value="B"> Madrid
+                </label><br>
+                <label>
+                    <input type="checkbox" name="option" value="C"> Paris
+                </label><br>
+                <label>
+                    <input type="checkbox" name="option" value="D"> Rome
+                </label><br>
+                <button type="button" onclick="submitAnswer()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="result">
+        <p id="resultMessage"></p>
+        <button id="tryAgain" onclick="tryAgain()">Try Again</button>
+        <button id="proceed" onclick="proceed()">Proceed</button>
+    </div>
+</div>
+
+<script>
+    let correctAnswer = "C";
+let score = 0;
+let questionIndex = 1;
+let timer;
+
+function submitAnswer() {
+    clearInterval(timer);
+    let selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+        let selectedValue = selectedOption.value;
+        if (selectedValue === correctAnswer) {
+            score++;
+            document.getElementById('resultMessage').innerText = 'Hooray! The answer is correct!';
+            document.getElementById('tryAgain').style.display = 'none';
+        } else {
+            document.getElementById('resultMessage').innerText = 'Wrong answer. Try again!';
+            document.getElementById('tryAgain').style.display = 'inline';
+        }
+        document.querySelector('.quiz2').style.display = 'none';
+        document.querySelector('.result').style.display = 'block';
+    } else {
+        alert('Please select an option.');
+    }
+}
+
+function tryAgain() {
+    document.querySelector('.quiz2').style.display = 'block';
+    document.querySelector('.result').style.display = 'none';
+    startTimer();
+}
+
+function proceed() {
+    questionIndex++;
+    document.querySelector('.quiz2').style.display = 'block';
+    document.querySelector('.result').style.display = 'none';
+    loadNextQuestion();
+    startTimer();
+}
+
+function loadNextQuestion() {
+    let questionContainer = document.getElementById('questionContainer');
+    if (questionIndex === 2) {
+        questionContainer.innerHTML = `
+            <p>Question 2: What is the capital of Italy?</p>
+            <label>
+                <input type="checkbox" name="option" value="A"> Berlin
+            </label><br>
+            <label>
+                <input type="checkbox" name="option" value="B"> Madrid
+            </label><br>
+            <label>
+                <input type="checkbox" name="option" value="C"> Paris
+            </label><br>
+            <label>
+                <input type="checkbox" name="option" value="D"> Rome
+            </label><br>
+            <button type="button" onclick="submitAnswer()">Submit</button>
+        `;
+        correctAnswer = "D";
+    } else {
+        // Add more questions or handle the end of the quiz
+        alert('Quiz completed! Your score: ' + score);
+    }
+}
+
+function startTimer() {
+    let time = 60;
+    timer = setInterval(function() {
+        if (time <= 0) {
+            clearInterval(timer);
+            alert('Time is up!');
+            submitAnswer();
+        } else {
+            console.log(time);
+        }
+        time--;
+    }, 1000);
+}
+
+// Start the timer when the quiz loads
+startTimer();
+
+</script>
+</body>
+</html>

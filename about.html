@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./about.css">
+</head>
+<body  data-bs-spy="scroll" data-bs-target=".nav" data-bs-offset="50">
+
+     <nav id="nav">
+         <ul>
+           <li><a href="home.html">home</a></li>
+           <li><a href="#section1">about</a></li>
+           <li><select name="" id="mySelect">
+            <option value="extc.html" id="extc">Electronics and telecommunication</option>
+            <option value="cs.html" id="cs">Computer science</option>
+            <option value="it.html" id="It">Information technology</option>
+            <option value="iot.html" id="Iot">Internet of things</option>
+           </select></li>
+           <li>
+            <input type="search" id="search">
+            <button type="button" class="btn btn-success" >search</button>
+           </li>
+           <li><a href="#section3">Topics</a></li>
+         </ul>
+
+         <div class="dis">
+            <div class="img">
+                <img src="./images/quiz.jpeg" style="height: 50px;width: 150px;align-items:end;margin-left: 350px;" alt="">
+            </div>
+            <div class="show" id="showDiv">
+
+            </div>
+         </div>
+     </nav>
+     
+     <div id="section1" class="container-fluid bg-dark text-white" style="padding: 150px 20px;" >
+        <h1 style="font-size: 52px;color: yellowgreen;"><u>Quiz:</u></h1>
+        <p style="font-size: 28px;margin-top: 40px;">Quiz is a website designed for student's understanding about the particular engineering branch before opting that a particular branch as a carrier.</p>
+        <p style="font-size: 28px;">
+            It provides overall difficulty and complexity of questions related to particular branch in an interesting way 
+        </p>
+        <p style="font-size: 28px;">
+            It also helps students who are engaged in a particular branch to take a quiz about the particular topic to text their preperations for the finals
+        </p>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/quiz 1.jpg" class="d-block w-100" style="height: 400px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/qt4.jpg" class="d-block w-100" style="height: 400px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/qt5.jpg" class="d-block w-100" style="height: 400px;" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div id="section3" class="container-fluid bg-dark text-white" style="padding: 50px 20px;" >
+        
+          <h1 style="color: yellowgreen;">Choose the topic  by clicking on respective fields:</h1>
+
+          <div class="main">
+
+            <div class="t1">
+                <div class="img1">
+                      <img src="./images/extc.webp" alt="" style="height:200px;width: 350px; " class="i1">
+                </div>
+                <div class="info1">
+                       <h3>Electronics and telecommunication</h3>
+                       <p>This branch focuses on communication systems, electronic devices, and signal processing.
+                          Topics include digital communication, microcontrollers, antennas, and wireless networks.
+                          Quizzes in this area could cover modulation techniques, circuit analysis, and network protocols.</p>
+                </div>
+                <div class="b1">
+                       <button type="button" class="btn btn-primary" onclick="extc()" style="margin-left: 22%;width: 225px;">let's begin</button>
+                </div>
+              </div>
+
+              <div class="t2">
+                <div class="img1">
+                      <img src="./images/cs.jpeg" alt="" style="height:200px;width: 350px; " class="i1">
+                </div>
+                <div class="info1">
+                       <h3>Computer Science</h3>
+                       <p>CS is a broad field covering theory, software engineering, and hardware design.
+                        Quizzes could delve into algorithms, data structures, operating systems, and software development methodologies.
+                        Topics like sorting algorithms, complexity analysis, and object-oriented programming are relevant.</p>
+                </div>
+                <div class="b1">
+                       <button type="button" class="btn btn-primary" onclick="cs()" style="margin-left: 22%;width: 225px;margin-top: 10px;">let's begin</button>
+                </div>
+              </div>
+
+              <div class="t3">
+                <div class="img1">
+                      <img src="./images/it.jpeg" alt="" style="height:200px;width: 350px; " class="i1">
+                </div>
+                <div class="info1">
+                       <h3>Information Technology</h3>
+                       <p>IT encompasses software development, databases, and system administration.
+                        Quizzes might explore programming languages (like Java or Python), web development, and cybersecurity.
+                        Questions could cover topics such as data structures, algorithms, and cloud computing.</p>
+                </div>
+                <div class="b1">
+                       <button type="button" class="btn btn-primary" onclick="it()" style="margin-left: 22%;width: 225px;margin-top: 35px;">let's begin</button>
+                </div>
+              </div>
+
+              <div class="t4">
+                <div class="img1">
+                      <img src="./images/iot.jpeg" alt="" style="height:200px;width: 350px; " class="i1">
+                </div>
+                <div class="info1">
+                       <h3>Internet of Things</h3>
+                       <p>IoT deals with interconnected devices and sensors.
+                        Quizzes might focus on protocols (like MQTT or CoAP), edge computing, and IoT security.
+                        Questions could cover topics such as sensor networks, embedded systems, and IoT architecture.</p>
+                </div>
+                <div class="b1">
+                       <button type="button" class="btn btn-primary" onclick="iot()" style="margin-left: 22%;width: 225px;margin-top: 35px;">let's begin</button>
+                </div>
+              </div>    
+          </div>
+     </div>
+
+     <script>
+        window.onload = function() {
+            // Retrieve the first letter from localStorage
+            var firstLetter = localStorage.getItem('userFirstLetter');
+
+            // Display the first letter in the show div
+            if (firstLetter) {
+                document.getElementById('showDiv').textContent = firstLetter;
+            }
+        };
+
+
+        function extc()
+        {
+            window.location.href="extc.html";
+        }
+        function cs()
+        {
+            window.location.href="cs.html";
+        }
+        function it()
+        {
+            window.location.href="it.html";
+        }
+        function iot()
+        {
+            window.location.href="iot.html";
+        }
+
+        const selectElement = document.getElementById('mySelect');
+        selectElement.addEventListener('change', function() {
+            const selectedValue = selectElement.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        });
+
+     </script>
+    
+</body>
+</html>

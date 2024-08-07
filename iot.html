@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./branch.css">
+    <script src="./iot.js"></script>
+</head>
+<body>
+    <div class="quiz1">
+        <div class="a1">
+            <h1><u>Rules and Guidelines:</u></h1>
+            <ul>
+                <li>The quiz will consist of 5 multiple-choice questions (MCQs).</li>
+                <li>There may be some questions where you have to write a relatable answer in 2-3 points.</li>
+                <li>Each question will have 4 answer options.</li>
+                <li>You’ll have 1 minute to answer each question.</li>
+                <li>Each correct answer will earn you 2 marks.</li>
+                <li>There are a total of 10 marks available for the entire quiz (5 questions × 2 marks each).</li>
+            </ul>
+            <h1 style="text-align: center;">Wish you very all the best!!</h1>
+            <input type="checkbox"> Click on the box to accept all the rules and regulations.
+            <div style="margin-top: 10px; margin-left: 30%;">
+                <button type="button" class="btn btn-primary" onclick="begin()" style="width: 200px;">Click to continue</button>
+            </div>
+        </div>
+
+        <div class="quiz2">
+            <div id="timer">Time left: 60 seconds</div>
+            <form action="" id="quiz_form_1">
+                <div class="question">
+                    <label for="question" id="questionLabel">Question 1: What is the primary goal of iot?</label>
+                    <label for="">
+                        <input type="radio" name="rad1" value="A" id="opt1">
+                        A) To enhanve global internet speed
+                    </label>
+                    <br>
+                    <label for="">
+                        <input type="radio" name="rad1" value="B" id="opt2">
+                        B) To network physical device
+                    </label>
+                    <br>
+                    <label for="">
+                        <input type="radio" name="rad1" value="C" id="opt3">
+                        C) To increase smartphone usage
+                    </label>
+                    <br>
+                    <label for="">
+                        <input type="radio" name="rad1" value="D" id="opt4">
+                        D) To improve social media platforms
+                    </label>
+                    <br>
+                    <div class="button">
+                        <button type="button" onclick="submitAnswer()" class="btn btn-primary" style="margin-top: 10px;width: 200px;">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+         <div class="result">
+            <p id="resultMessage" class="resultMessage" style="text-align: center;font-size: 40px;margin-top: 175px;"></p>
+            <button id="tryAgain" onclick="tryAgain()" style="margin-left: 33%;width: 200px;" class="btn btn-warning">Try Again</button>
+            <button id="proceed" onclick="proceed()" style="margin-left: 33%;width: 200px;" class="btn btn-success">Proceed</button>
+            <button id="backToAbout" onclick="backToAbout()" style="margin-left: 33%;width: 200px;margin-top: 10px;" class="btn btn-info" style="display: none;">Back to About Page</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>

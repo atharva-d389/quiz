@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(7, 19, 50);
+}
+
+.quiz1 {
+    height: 470px;
+    width: 600px;
+    transform: translate(76%, 20%);
+    background-color: whitesmoke;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.question{
+    padding: 15px;
+   
+    font-size: 30px;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.quiz2, .result {
+    display: none;
+}

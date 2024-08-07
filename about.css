@@ -1,0 +1,143 @@
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+#nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Aligns all items within the ul to the center */
+}
+
+#nav ul li {
+    margin: 0 10px;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    
+}
+
+#nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#nav select, #nav input[type="search"] {
+    padding: 10px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#nav select {
+    background-color: #333;
+    color: white;
+}
+
+#nav input[type="search"] {
+    background-color: #222;
+    color: white;
+}
+
+#nav button.btn-success {
+    padding: 10px 15px;
+    margin: 0 10px;
+    background-color: #28a745;  
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#nav button.btn-success:hover {
+    background-color: #218838;
+}
+.dis{
+    display: flex;
+   
+
+}
+.show{
+    border: 2px solid white;
+    height: 50px;
+    width: 50px;
+    background: green;
+    margin-left: 1px;
+    color:white;
+    padding:5px;
+    font-size: 36px;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-wrap: nowrap;
+}
+    
+
+
+.t1{ 
+        margin-top: 20px;
+       background-color: rgb(5, 38, 54);
+        height: 550px;
+        width: 400px;
+}
+.t1:hover{
+    transform: translate(0,-10px);}
+.i1{   
+    width: 350px;
+    height: 200px;
+    transform: translate(0,10px);
+}
+.info1{
+    text-align: center;
+    color: orangered;
+    background-color: transparent;
+    margin-top: 10px;
+    padding: 5px;
+}
+.info1 p{
+    color: whitesmoke;
+}
+.info1:hover{
+    transform: translate(-2px,-10px);
+}
+
+.t2{ 
+    margin-top: 20px;
+   background-color: rgb(5, 38, 54);
+    height: 550px;
+    width: 400px;
+   margin-left: 20px;
+}
+.t2:hover{
+    transform: translate(0,-10px);
+}
+.t3{ 
+    margin-top: 20px;
+   background-color: rgb(5, 38, 54);
+    height: 550px;
+    width: 400px;
+   margin-left: 20px;
+}
+.t3:hover{
+    transform: translate(0,-10px);}
+.t4{ 
+    margin-top: 20px;
+   background-color: rgb(5, 38, 54);
+    height: 550px;
+    width: 400px;
+   margin-left: 20px;
+}
+.t4:hover{
+    transform: translate(0,-10px);}
